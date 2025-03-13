@@ -25,6 +25,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace("com.apm.money.apm_plugin")
+    }
+    
     compileSdkVersion 33
 
     sourceSets {
